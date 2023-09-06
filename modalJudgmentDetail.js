@@ -28,7 +28,7 @@ const JudgmentDetail = seq.define('judgment_detail', {
 });
 
 const fs = require('fs');
-const examples = fs.readFileSync('civil-case-detail-5.json', {encoding: 'utf-8'});
+const examples = fs.readFileSync('xab', {encoding: 'utf-8'});
 const lines = examples.split(/\r\n|\n/);
 
 lines.forEach(async (line, index) => {
@@ -50,6 +50,6 @@ lines.forEach(async (line, index) => {
       } catch (e) {
         console.log(e)
       }
-    }, index * 40);
+    }, index * 100);
   }
 })
